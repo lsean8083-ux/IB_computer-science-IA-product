@@ -7,7 +7,8 @@ import termios
 
 database_mode = "Vocabulary_list.db"
 
-# online researched for terminal use:
+# online researched for terminal in Mac use:
+# can be deleted in case if the programme is running in common environment
 def getch():
     fd = sys.stdin.fileno()
     old_settings = termios.tcgetattr(fd)
@@ -97,6 +98,7 @@ class Vocab_data:
         
         while True:
             word_item = self.get_next_word()
+            # for highlight the options
             print(f"Do you know this?  （ {word_item[0]} ）  ([\033[4mY\033[0mes]] / [\033[4mN\033[0mo]] / [\033[4mE\033[0mxit]] / [\033[4mS\033[0mcoreboard]])：") 
             answer = getch()
             
@@ -133,9 +135,6 @@ class Vocab_data:
 
 
 if __name__ == "__main__":
-    
-    
-    
     vocab = Vocab_data()
     vocab.load()
     vocab.test()
