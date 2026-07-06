@@ -9,14 +9,15 @@ database_mode = "Vocabulary_list.db"
 
 # online researched for terminal in Mac use:
 # can be deleted in case if the programme is running in common environment
-def getch():
+"""def getch():
     fd = sys.stdin.fileno()
     old_settings = termios.tcgetattr(fd)
     try:
         tty.setcbreak(fd)
         return sys.stdin.read(1)
     finally:
-        termios.tcsetattr(fd, termios.TCSAFLUSH, old_settings)
+        termios.tcsetattr(fd, termios.TCSAFLUSH, old_settings)"""
+#can be optional if using terminal
 
 # main page
 
@@ -100,7 +101,9 @@ class Vocab_data:
             word_item = self.get_next_word()
             # for highlight the options
             print(f"Do you know this?  （ {word_item[0]} ）  ([\033[4mY\033[0mes]] / [\033[4mN\033[0mo]] / [\033[4mE\033[0mxit]] / [\033[4mS\033[0mcoreboard]])：") 
-            answer = getch()
+            """answer = getch()"""
+            #connect with the terminal
+            answer = input()
             
             if answer == "y" or answer == "yes":
                 print("correct")
