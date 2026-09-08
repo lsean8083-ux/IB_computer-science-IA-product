@@ -1,4 +1,0 @@
-print("hello world")
-#GUI
-
-import tkinter as tk
