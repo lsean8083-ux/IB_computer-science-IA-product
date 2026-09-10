@@ -142,7 +142,7 @@ class VocabularyDatabase:
             writer.writeheader(); writer.writerows(map(dict, self.all_words()))
 
     def migrate_trial_2(self, old_path=None):
-        old_path = Path(old_path or Path(__file__).with_name("Vocabulary_list_Trial_2.db"))
+        old_path = Path(old_path or Path(__file__).with_name("Vocabulary_list_Trial_3.db"))
         if not old_path.exists(): return 0
         try:
             source = sqlite3.connect(old_path); source.row_factory = sqlite3.Row
