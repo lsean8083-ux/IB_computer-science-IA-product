@@ -595,8 +595,8 @@ def run_practice(vocabulary):
     print("===================================")
 
     print(
-        "Y = correct"
-        " | N = incorrect"
+        "Y = Yes, I understand"
+        " | N = No, I don't understand"
         " | S = statistics"
         " | M = high-priority"
         " | E = exit"
